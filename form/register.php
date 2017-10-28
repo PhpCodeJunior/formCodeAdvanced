@@ -2,7 +2,7 @@
 include_once("classRegister.php");
 $reg = new Register();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-    if($reg->proces($_POST["username"],$_POST["password"],$_POST["name"],$_POST["email"])){
+    if($reg->proces()){
         echo "ok";
     }else{
         $reg->show_errors();
